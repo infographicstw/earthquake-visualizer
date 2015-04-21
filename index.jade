@@ -16,4 +16,25 @@ html(lang="en")
     link(rel="stylesheet",type="text/css",href="index.css")
     script(type="text/javascript",src="index.js")
   body
+    .fb-fan-box
+      .fb-like-box(data-href="https://www.facebook.com/data.visualize",data-colorscheme="light",
+        data-show-faces="false",data-header="false",data-stream="false",data-show-border="false")
+    .fb-share-link
+      .fb-share-button(data-href="http://data.infographics.tw/viz/earthquake/",data-layout="button_count")
     iframe(width='100%',height='100%',frameborder='0',src='https://infographicstw.cartodb.com/viz/937dff1c-e7d7-11e4-b596-0e0c41326911/embed_map',allowfullscreen,webkitallowfullscreen,mozallowfullscreen,oallowfullscreen,msallowfullscreen)
+    #fb-root
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=1587437048209186&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-59333798-1', 'auto');
+      ga('send', 'pageview');
